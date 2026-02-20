@@ -1,0 +1,30 @@
+# .gitignore for Pixelfjord Statiq Web project
+
+# Statiq output and cache
+site/output/
+site/temp/
+site/cache/
+
+# User secrets and local settings
+site/appsettings.Development.json
+site/appsettings.Local.json
+
+# .NET build artifacts
+site/bin/
+site/obj/
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node/npm (if used for theme tooling)
+site/node_modules/
+
+# Ignore test results
+site/tests/results/

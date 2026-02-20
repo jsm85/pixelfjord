@@ -1,0 +1,51 @@
+name: Build and Deploy Statiq Web to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install Statiq Web template
+        run: dotnet new install Statiq.Web.Templates
+
+      - name: Restore tools
+        run: dotnet tool restore
+        working-directory: site
+
+      - name: Build site
+        run: dotnet run --project site -- preview=false
+
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: statiq-site
+          path: site/output
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          uploadArtifacts: true
+          runs: 1
+          urls: 'file://$(pwd)/site/output/index.html'
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site/output
+          publish_branch: gh-pages
+          force_orphan: true
