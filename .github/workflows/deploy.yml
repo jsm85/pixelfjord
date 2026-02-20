@@ -26,7 +26,7 @@ jobs:
         working-directory: site
 
       - name: Build site
-        run: dotnet run --project site -- preview=false
+        run: dotnet run --project site
 
 
       - name: Upload artifact
