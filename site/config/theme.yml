@@ -1,0 +1,5 @@
+Theme: pixelfjord
+InputPaths: input;content
+OutputPath: output
+Layouts: themes/pixelfjord/layouts
+Assets: themes/pixelfjord/assets

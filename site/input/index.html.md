@@ -1,7 +1,6 @@
 Title: Pixelfjord
 HeroTitle: Welcome to Pixelfjord
 HeroDesc: A creative space for code and art.
-Layout: _layout
 ---
 # Hello World!
 

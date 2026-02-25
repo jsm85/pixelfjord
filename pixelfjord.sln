@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "site", "site", "{39BD2E36-7548-A3B4-59B4-E088F7E0624A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixelfjord", "site\Pixelfjord.csproj", "{9524E8F5-832A-7EC8-2571-A35B30C2CC53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9524E8F5-832A-7EC8-2571-A35B30C2CC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9524E8F5-832A-7EC8-2571-A35B30C2CC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9524E8F5-832A-7EC8-2571-A35B30C2CC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9524E8F5-832A-7EC8-2571-A35B30C2CC53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9524E8F5-832A-7EC8-2571-A35B30C2CC53} = {39BD2E36-7548-A3B4-59B4-E088F7E0624A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF423BDD-CD9C-411E-8E2F-A73F32F4C9CF}
+	EndGlobalSection
+EndGlobal

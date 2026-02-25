@@ -1,0 +1,96 @@
+/* Pixelfjord Theme - Simple, Clean, Responsive */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8fafc;
+  color: #222;
+}
+
+header.hero {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #4f8cff 0%, #a6e3e9 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 5vw;
+  transition: min-height 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+header.hero.shrink {
+  min-height: 30vh;
+  padding: 1rem 5vw;
+}
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 5vw;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav {
+  position: absolute;
+  top: 2rem;
+  right: 5vw;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #222;
+}
+
+.hero-content {
+  margin-top: 8vh;
+  max-width: 600px;
+}
+.hero-title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.hero-desc {
+  font-size: 1.5rem;
+  color: #e0f7fa;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 700px) {
+  .hero-title { font-size: 2rem; }
+  .hero-content { margin-top: 4vh; }
+  .logo, nav { top: 1rem; left: 3vw; right: 3vw; }
+}
+
+main {
+  padding: 3rem 5vw 2rem 5vw;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  margin-top: -5rem;
+  position: relative;
+  z-index: 2;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  margin: 3rem 0 1rem 0;
+}

@@ -1,0 +1,18 @@
+# Statiq Web main configuration
+
+Theme: pixelfjord
+InputPaths: input
+OutputPath: output
+Layouts: themes/pixelfjord/layouts
+Assets: themes/pixelfjord/assets
+
+Pipelines:
+  - Name: Pages
+    InputPaths: input;content
+    ProcessModules:
+      - Execute: Markdown
+      - SetDestination:
+          Extension: .html
+      - RenderRazor
+    OutputModules:
+      - WriteFiles

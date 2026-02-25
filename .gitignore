@@ -28,3 +28,5 @@ site/node_modules/
 
 # Ignore test results
 site/tests/results/
+
+/.vs

@@ -1,0 +1,40 @@
+@inherits StatiqRazorPage<IDocument>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@(Document.GetString("Title") ?? "Pixelfjord")</title>
+    <link rel="stylesheet" href="/themes/pixelfjord/assets/style.css" />
+    @RenderSection("Head", required: false)
+</head>
+<body>
+    <header class="hero" id="hero">
+        <div class="logo">Pixelfjord</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="hero-content">
+            <h1 class="hero-title">@((Document.GetString("HeroTitle") ?? "Welcome to Pixelfjord"))</h1>
+            <div class="hero-desc">@((Document.GetString("HeroDesc") ?? "A creative space for code and art.") )</div>
+        </div>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        &copy; @(DateTime.Now.Year) Pixelfjord. All rights reserved.
+    </footer>
+    <script>
+    // Shrink hero on scroll
+    window.addEventListener('scroll', function() {
+      var hero = document.getElementById('hero');
+      if(window.scrollY > 60) hero.classList.add('shrink');
+      else hero.classList.remove('shrink');
+    });
+    </script>
+</body>
+</html>
